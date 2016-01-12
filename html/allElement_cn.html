@@ -1,0 +1,341 @@
+<!-- html 学习笔记-->
+
+<!-- 
+DOCTYPE:
+1. HTML文档
+2. HTML所属的版本
+-->
+<!DOCTYPE HTML><html lang="en">
+<!-- html的根元素， HTML部分的开始 -->
+<html>
+<!-- head元素包含着文档的元数据，向浏览器提供了有关文档内容和标记的信息 -->
+<head>
+	<!-- ttile元素设置文档的标题和名称 --> 
+	<title>all element</title>
+	<!-- herf属性指定了解析文档后面的<a>元素的相对URL的基准URL -->
+	<base href="http://titan/listings">
+	<meta name="author" content="Chenxuewei">
+	<meta name="description" content="all element cn">
+	<meta name="keywords" content="HTML, CSS, XML, XHTML, JavaScript"> 
+	<!-- charset定义文档的字符编码 -->
+	<meta charset="utf-8">
+	<meta charset="ISO-8859-1">
+	<meta http-equiv="refresh" content="5">
+	<!-- 
+		style元素的media属性值
+		all:		用于所有设备（默认值）。
+		aural:		用于语音合成器。
+		braille		用于盲文设备。
+		handheld:	用于手持设备。
+		projection:	用于投影仪。
+		print:		打印预览和打印页面。
+		screen:		PC显示器屏幕。
+		tty:		电传打字机之类的等宽设备。
+		tv:			用于电视机。
+	-->
+	<style media="all" type="text/css"></style>
+	<!-- 除了AND， 还可以使用NOT和表示OR的逗号（,） --> 
+	<!-- 
+		width height:			指定浏览器窗口的宽度和高度，单位px。
+		device-width:			指定整个设备的宽度。
+		device-height:			指定整个设备的高度。
+		resolution:				指定设备的像素密度	。
+		orientaton:				指定设备的较长边朝向。
+		aspect-ratio:			指定浏览器窗口的像素宽高比。
+		device-aspect-ratio:	指定整个设备的像素宽高比。
+		color monochrome:		指定彩色或黑白设备上每个像素占用的二进制位数。
+		color-index:			指定设备所能显示的颜色数目。
+		scan:					指定电视的扫描模式，支持的值有pregressive和interlace。
+		gird:					指定设备的类型，网格型设备使用固定的网格显示内容。
+	-->
+	<style media="screen AND (max-width: 500px)"type="text/css"></style>
+	<!-- 链接外部资源 -->
+	<!-- 
+		href:		指定link元素指向的资源的URL。
+		hreflang:	说明所链接资源所有的语言。
+		media:		说明所链接的内容用于哪种设备。
+		rel:		说明文档与所链接资源的关系类型。
+		sizes:		指定图标的大小。
+		type:		指定所连接诶资源的MIME类型，如text/css、image/x-icon。	
+	-->
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<!-- link元素的rel属性 -->
+	<!--
+		alternate:	链接到文档的替代版本，比如另一个语言的译本。
+		author:		链接到文档的作者。
+		help:		链接到当前文档的说明文档。
+		icon:		指定图标资源。
+		license:	链接到当前文档的相关许可证。
+		pingback:	指定一个回探（pingback）服务器。
+		prefetch:	预先获取一个资源。
+		stylesheet:	载入外部样式表。
+	-->
+	<link rel="shortcut icon" href="" type="image/x-icon">
+	<link rel="prefetch" type="text/css" href="/page2.html">
+
+	<!-- script元素用来在页面中加入脚本，分为在文档中定义脚本和引用外部文件中的脚本 -->
+	<script type="text/javascript">
+		document.write("This is form the script");
+	</script>
+	<!-- scritpt元素的局部属性 -->
+	<!--
+		type:		引用或定义的脚本类型。
+		src:		外部脚本的URL。
+		defer:		设定脚本的加载和执行推迟到HTML文档中所有元素都已得到解析之后。
+		async:		设定解析HTML文档和其他元素同时异步加载。
+		charset: 	外部脚本文件所用字符编码。
+	-->
+	<script defer src="simple.js"></script>
+	<script async src="simple.js"></script>
+
+	<!-- 用来向禁用了JavaScript或浏览器不支持JavaScript的用户显示内容 -->
+	<noscript>
+		<h1>Javascript is required!</h1>
+		<p>You cannot use this page without Javascript</p>
+	</noscript>
+	<noscript>
+		<meta http-equiv="refresh" content="0; http:www.simple.com" />
+	</noscript>
+
+</head>
+
+<!-- body表示文档内容 -->
+<body>
+<!--
+	a元素的局部属性
+	href:		a元素的指定的URL。
+	hreflang:	链接资源使用的语言。
+	media:		链接用于哪种设备。
+	rel:		文档与所链接资源的浏览环境。
+	target:		打开链接资源的浏览环境。
+	type:		说明链接资源的MIME类型。
+-->
+<!-- a元素的target属性使用的值 -->
+<!--
+	_blank:		在新窗口或标签页中打开文档。
+	_parent:	在父窗框组（frameset）中打开文档。
+	_self:		在当前窗口中打开文档（默认）。
+	_top:		在顶层窗口打开文档。
+	<frame>:	在指定窗框中打开文档。
+-->
+I like <a href="http://en.wikipedia.org/wiki/Apples">apples</a>
+
+<!--
+	表示文章中提到的关键字或产品名称。
+	习惯样式：b{font-weight: bolder;}
+-->
+<b>apples</b>
+
+<!--
+	表示强调。
+	习惯样式：b{font-style: italic;}
+-->
+<em>apples</em>
+
+<!--
+	用于外文单词，科技术语
+	习惯样式：i{font-style: italic;}
+-->
+<i>apples</i>
+
+<!--
+	表示文字不正确
+	习惯样式：s{text-decoration:line-through;}
+-->
+<s>apples</s>
+
+<!--  
+	表示强调
+	习惯样式：strong{font-weight:bolder;}
+-->
+<strong>apples</strong>
+
+<u>尽量避免使用，和a元素混淆</u>
+
+<!--
+	常用语免责声明和澄清声明
+	习惯样式：small{font-size: smaller;}
+-->
+<small>apples</small>
+
+<!--
+	习惯样式：sub{vertical-align: sub; font-size:smaller;}
+			 sup{vertical-align: super; font-size: smaller;}
+-->
+x<sub>10</sub> and 10<sup>th</sup>
+
+<!-- wbr更智能，浏览器判断是否适合换行 -->
+<br></br><wbr></wbr>
+
+<code>表示程序代码 code{font-family: monospace;}</code>
+<var>表示程序变量 var{font-style: italic;}</var>
+<samp>表示程序系统的输出 samp{font-family: monospace;}</samp>
+<kbd>表示用户输入 kbd{font-family: monispace;}</kbd>
+
+<!-- abbr元素表示缩写，title表示缩写代表的完整词语 -->
+<abbr title="Florida Department of Citrus">FDOC</abbr>
+
+<!-- 如果要为dfn元素设置title属性，必须将其设置为所定义的术语 -->
+<dfn title="apple">apple</dfn>
+
+<!--
+	表示引用他处的内容
+	习惯样式 q{display: inline;}
+			q:before{content: open-quote;}
+			q:after{content: close-quote;}
+-->
+<q cite="http://en.wikipedia.org/wiki/Apple"></q>
+
+<!-- 
+	表示引用的作品的标题
+	习惯样式 cite{font-style: italic;}
+-->
+<cite></cite>
+
+<!-- 帮助表示音标 -->
+<ruby>哈<rp>(</rp><rt>hå</rt><rp>)</rp></ruby>
+
+<!-- 文字方向设置， 左向还是右向 -->
+<bdo dir="ltr">I like apples</bdo>
+<bdo dir="rtr">I like apples</bdo>
+
+<!-- 一般文字 -->
+<span>apple</span>
+
+<!-- 
+	表示凸显的文字
+	习惯样式 mark{ backgroud-color: yellow; color: black } 
+-->
+<mark>apple</mark>
+
+<!--
+	ins元素和del元素可以分别用来表示文档中添加和删除的文字。
+	习惯样式 ins { text-decoration: underline; }
+			del { text-decoration: line-through; }
+-->
+<del>apple</del>
+<ins>apple</ins>
+
+<time datetime="15:00">3 o'clock</time>
+
+<!-- 
+	习惯样式
+	p { display: block;
+		margin-before: 1em;
+		margin-after: 1em;
+		margin_start: 0;
+		margin_end: 0;}
+ -->
+<p>表示段落</p>
+
+<!-- 习惯样式 div { display: block;} -->
+<div>没有具体含义</div>
+
+<!--
+	习惯样式 { display: block;
+		      font-family: monospace:
+			  white-space: pre;
+			  margin: 1em 0; }
+-->
+<pre>可以改变浏览器处理内容的方式，阻止合并空白字符，保留源文件的格式</pre>
+
+<!--
+	blockquote { display: block;
+				 margin-before: 1em;
+				 margin-after: 1em;
+				 margin-start: 40px;
+				 margin-end: 40px; } 
+-->
+<blockquote cite="http://en.wikipedia.org">表示引用别处，和q元素相似，常用引用内容较多</blockquote>
+
+<ol>
+	<li>有序列表</li>
+</ol>
+
+<ul>
+	<li>无序列表</li>
+</ul>
+
+<dl>
+	<dt>说明列表</dt>
+</dl>
+
+<!-- 一个独立的内容单元，可带标题。 -->
+<figure>
+	<figcaption>listing 23</figcaption>
+	<code>
+		var fruits = ["apples"];
+	</code>
+</figure>
+
+<!-- h1 { display: block; font-size: 2em; 
+		  margin-before: 0.67em; margin-after: 0.67em;
+		  margin-start: 0; margin-end: 0;
+		  font-weight: bold; } -->
+<h1></h1>
+
+<!-- h2 { display: block; font-size: 1.5em; 
+		  margin-before: 0.83em; margin-after: 0.83em;
+		  margin-start: 0; margin-end: 0;
+		  font-weight: bold; } -->
+<h2></h2>
+
+<!-- h3 { display: block; font-size: 1.17em; 
+		  margin-before: 1em; margin-after: 1em;
+		  margin-start: 0; margin-end: 0;
+		  font-weight: bold; } -->
+<h3></h3>
+
+<!-- h4 { display: block;
+		  margin-before: 1.33em; margin-after: 1.33em;
+		  margin-start: 0; margin-end: 0;
+		  font-weight: bold; } -->
+<h4></h4>
+
+<!-- h5 { display: block; font-size: 0.83em; 
+		  margin-before: 1.67em; margin-after: 0167em;
+		  margin-start: 0; margin-end: 0;
+		  font-weight: bold; } -->
+<h5></h5>
+
+<!-- h6 { display: block; font-size: 0.67em; 
+		  margin-before: 2.33em; margin-after: 2.33em;
+		  margin-start: 0; margin-end: 0;
+		  font-weight: bold; } -->
+<h6></h6>
+
+<!-- 将几个标题元素作为一个整体处理 -->
+<hgroup>
+	<h1></h1>
+	<h2></h2>
+</hgroup>
+
+<!-- section元素用来包含那种应该列入大纲或目录中的内容 -->
+<section>
+	<h1></h1>
+</section>
+
+<!-- header元素表示一节的首部 footer表示一节的尾部 -->
+<header>
+	<hgroup>
+		<h1></h1>
+		<h2></h2>
+	</hgroup>
+</header>
+<footer></footer>
+
+<!-- nav元素表示文档的一个区域，包含着到其他页面或同一页面的其他部分的链接 -->
+<nav>
+	<h1></h1>
+</nav>
+
+<article> 表示HTML文档中一段独立成篇的内容 </article>
+
+<aside> aside元素用来表示跟周边内容 </aside>
+
+<details> 
+	<summary></summary>
+</details>
+</body>
+</html>
+
