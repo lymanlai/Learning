@@ -85,3 +85,26 @@ Amongst the payoffs, by the end of the chapter we'll be in position to understan
 
 ## Perceptrons
 ===========================
+
+What is a neural network? To get started, I'll explain a type of artificial neuron called a perceptron.
+
+Perceptrons were developed in the 1950s and 1960s by the scientist Frank Rosenblatt, inspired by earlier work by Warren McCulloch and Walter Pitts.
+
+Today, it's more common to use other models of artificial neurons - in this book, and in nuch modern work on neural networks, the main neuron model used is one called the sigmoid neuron.
+
+We'll get to sigmoid neurons shortly.
+
+But to understand why sigmoio neurons are defined the way they are, it's worth taking the time to first understand perceptrons.
+
+So how do perceptrons work? A perceptron takes several binary input, x1, x2, ...., and produces a single binary output:
+
+
+
+
+In the example shown the perceptron has three input x1, x2, x3. In general it could have more or fewer inputs.
+
+Rosenblatt proposed a simple rule to compute the output.
+
+He inroduced weights, w1, w2, ..., real numbers expressing the importance of the respective inputs to the output. 
+
+The neuron's output, 0, or 1, is determined by whether the weighted sum 
