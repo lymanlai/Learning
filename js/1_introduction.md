@@ -20,3 +20,11 @@
 
 2. DOM 级别
 
+3. DOM标准
+
+4. Web 浏览器对DOM的支持
+
+### 浏览器对象模型（BOM）
+
+
+## JavaScript 版本
